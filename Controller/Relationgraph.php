@@ -60,7 +60,7 @@ class Relationgraph extends BaseController
                 'priority' => $task['priority'],
                 'assignee' => $task['assignee_name'] ?: $task['assignee_username'],
                 'color' => $this->colorModel->getColorProperties($task['color_id']),
-                'url' => $this->helper->url->to('TaskViewController', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']))
+                'url' => urlencode($this->helper->url->to('TaskViewController', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])))
             ];
         }
 

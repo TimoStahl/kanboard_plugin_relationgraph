@@ -25,7 +25,7 @@ $(document).ready(function() {
     network.on("selectNode", function (params) {
         if (params.nodes.length === 1) {
             var node = nodes.get(params.nodes[0]);
-            window.open(node.url, '_blank');
+            window.open(decodeURIComponent(node.url), '_blank');
         }
     });
 });

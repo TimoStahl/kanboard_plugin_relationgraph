@@ -1,5 +1,5 @@
 plugin=Relationgraph
-version=0.3.0
+version=0.3.1
 
 all:
 	@ echo "Build archive for plugin ${plugin} version=${version}"

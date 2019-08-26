@@ -19,19 +19,19 @@
         $titleItems = [];
 
         if ($node['project_id'] != $task['project_id']) {
-            $titleItems[] = t('Project: ') . $node['project'];
+            $titleItems[] = t('Project').': ' . $node['project'];
         }
 
         if ($node['score'] > 0) {
-            $titleItems[] = t('Score: ') . $node['score'];
+            $titleItems[] = t('Score').': ' . $node['score'];
         }
 
         if ($node['assignee'] != '') {
-            $titleItems[] = t('Assignee: ') . $node['assignee'];
+            $titleItems[] = t('Assignee').': ' . $node['assignee'];
         }
 
-        $titleItems[] = t('Priority: ') . $node['priority'];
-        $titleItems[] = t('Column: ') . $node['column'];
+        $titleItems[] = t('Priority').': ' . $node['priority'];
+        $titleItems[] = t('Column').': ' . $node['column'];
 
         $items[] = [
             'id' => $node['id'],
@@ -72,7 +72,3 @@
     <?php endforeach ?>
     <?php echo json_encode($items) ?>
 </div>
-
-<?= $this->asset->js(PLUGINS_DIR.'/Relationgraph/Asset/Javascript/vis/vis.js') ?>
-<?= $this->asset->css(PLUGINS_DIR.'/Relationgraph/Asset/Javascript/vis/vis.css') ?>
-<?= $this->asset->js(PLUGINS_DIR.'/Relationgraph/Asset/Javascript/GraphBuilder.js') ?>

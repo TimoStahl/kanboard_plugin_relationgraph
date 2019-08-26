@@ -47,6 +47,7 @@
             ],
             'shadow' => 'true',
             'mass' => 2,
+            'url' => $node['url'],
             'title' => join('<br>', $titleItems)
         ];
         ?>

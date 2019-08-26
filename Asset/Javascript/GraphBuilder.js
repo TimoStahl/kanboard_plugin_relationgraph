@@ -21,5 +21,12 @@ $(document).ready(function() {
     };
 
     var network = new vis.Network(container, data, options);
+
+    network.on("selectNode", function (params) {
+        if (params.nodes.length === 1) {
+            var node = nodes.get(params.nodes[0]);
+            window.open(node.url, '_blank');
+        }
+    });
 });
 
